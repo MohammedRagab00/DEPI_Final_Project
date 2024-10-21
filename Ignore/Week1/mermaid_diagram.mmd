@@ -1,0 +1,87 @@
+erDiagram
+    Department ||--o{ Users : "has students"
+    Department ||--o{ Place : "has"
+    Department ||--o{ Courses : "offers"
+    Users ||--o{ Course_registered : "enrolls"
+    Users ||--o{ Section : "teaches"
+    Users ||--|| Grade : "has"
+    Courses ||--o{ Section : "has"
+    Courses ||--o{ Course_prerequisite : "requires"
+    Courses ||--o{ Course_grade : "records"
+    Section ||--o{ Course_registered : "contains"
+    Place ||--o{ Section : "hosts"
+    ValidDays ||--o{ Section : "schedules"
+    Users ||--o{ Course_grade : "receives"
+
+    Department {
+        int id PK
+        string name UK
+        int head_id
+    }
+
+    Users {
+        int id PK
+        string first_name
+        string last_name
+        string email_address UK
+        string ssn UK
+        string password_hash
+        int major FK
+        string role
+    }
+
+    Grade {
+        int student_id PK, FK
+        int passed_credit_hours
+        int failed_credit_hours
+        float gpa
+    }
+
+    Courses {
+        string id PK
+        string name UK
+        int credit_hours
+        int department FK
+    }
+
+    Course_prerequisite {
+        string course_id PK, FK
+        string prerequisite_id PK, FK
+    }
+
+    Place {
+        int place_num PK
+        int department FK
+        int capacity
+    }
+
+    ValidDays {
+        string day PK
+    }
+
+    Section {
+        int id PK
+        string course_id FK
+        int place FK
+        string semester
+        string type
+        string day FK
+        time start_time
+        time end_time
+        int group_num
+        int capacity
+        int instructor_id FK
+    }
+
+    Course_registered {
+        int student_id PK, FK
+        int section_id PK, FK
+    }
+
+    Course_grade {
+        date semester PK
+        string course_id PK, FK
+        int student_id PK, FK
+        int grade
+        decimal gpa_points
+    }

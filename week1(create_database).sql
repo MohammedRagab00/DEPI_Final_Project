@@ -17,8 +17,8 @@ CREATE TABLE Users (
     first_name VARCHAR(20) NOT NULL,
     last_name VARCHAR(20) NOT NULL,
     email_address VARCHAR(50) NOT NULL UNIQUE,
-    ssn VARCHAR(20) NOT NULL UNIQUE,
-    password_hash VARCHAR(60) NOT NULL,
+    ssn VARCHAR(200) NOT NULL UNIQUE,
+    password_hash VARCHAR(150) NOT NULL,
     major INTEGER,
     role VARCHAR(10) NOT NULL DEFAULT 'Unassigned',
     FOREIGN KEY (major) REFERENCES Department(id),
@@ -317,7 +317,7 @@ INSERT INTO Course_grade (semester, course_id, student_id, grade) VALUES
 
 select * from grade
 select * from Course_grade
-truncate table course_grade
+-- truncate table course_grade
 -- Sample Queries for Analysis
 
 -- 1. Get student's current course load

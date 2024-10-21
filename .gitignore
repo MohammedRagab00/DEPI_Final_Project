@@ -1,1 +1,17 @@
-mermaid_diagram.mmd
+# /Ignore
+
+# Virtual environment
+env/
+
+# Python-related
+*.py[cod]
+__pycache__/
+
+# Environment variables
+.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Other
+.DS_Store
