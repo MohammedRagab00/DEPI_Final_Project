@@ -1,3 +1,5 @@
+use StudentManagementSystem
+
 --Fact Table: GradeFact
 CREATE TABLE GradeFact (
   GradeID INT PRIMARY KEY,

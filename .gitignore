@@ -15,3 +15,7 @@ __pycache__/
 
 # Other
 .DS_Store
+.vscode
+
+ETL_01.py
+ETL_02.py

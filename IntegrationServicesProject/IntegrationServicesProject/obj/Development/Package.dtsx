@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="50"
-  DTS:VersionGUID="{46970D42-2CAC-4260-AB99-B16A296FE21C}">
+  DTS:VersionBuild="53"
+  DTS:VersionGUID="{8414ACFA-D1B1-4B48-9450-F3177E5AF170}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -329,7 +329,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6i3dL+t5WU6+zzxEB6jLKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABiMZi4UB/bZAIpqmjVrQuw6OxpXDUCpNn+IAF5U+m8jgAAAAAOgAAAAAIAACAAAADbQJIuBtm0T/wf0gzv6Mw/H2fEsJTh38lAOeUFu+7FBTAAAADKE7kZOrZum33Sq3+Hu9G8fDhoSkoaU28shwZe29hrxKQsmB2qQPeR6zqytVpRdktAAAAAeLvX0/NsmkO8VOsca2fZyUg87ZqafjNSFOEMjgYpiraTzkzXufHWRwmRhno4o/CFzf0IfPQefwWSxEjhMNgSfw</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6i3dL+t5WU6+zzxEB6jLKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABW6W1kq3838rkGC66adsAtPn1Pu8aDUpnbkO90zvDQEwAAAAAOgAAAAAIAACAAAADfpMgvNPwR6wNO2dfQHlm4mwzTgRhq7EkwGzG9KQfT3zAAAADribiEKRxyT1LbCRHdTl0jImUi9F18s6Gcx6OZmIbyunYuyhrRGakRejQXJNOvGNZAAAAAYtDnEkAdJqi13kYPglXSq/CN/F7TzJEX+IUGT0kFgfQ7vgFcaqAqDMsqX30w355CZqtAGCLgMPsrRX5ds/SirQ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -8360,7 +8360,7 @@ where [refTable].[id] = ?</property>
                       refId="Package\users\Lookup.Inputs[Lookup Input].Columns[Copy of major]"
                       cachedDataType="i4"
                       cachedName="Copy of major"
-                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of major]">
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of major]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -8495,8 +8495,9 @@ where [refTable].[id] = ?</property>
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="email"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[email_address]"
-                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[email]" />
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[email]" />
                     <inputColumn
                       refId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of first_name]"
                       cachedCodepage="1252"
@@ -8504,7 +8505,7 @@ where [refTable].[id] = ?</property>
                       cachedLength="20"
                       cachedName="Copy of first_name"
                       externalMetadataColumnId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
-                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of first_name]" />
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of first_name]" />
                     <inputColumn
                       refId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of last_name]"
                       cachedCodepage="1252"
@@ -8512,7 +8513,7 @@ where [refTable].[id] = ?</property>
                       cachedLength="20"
                       cachedName="Copy of last_name"
                       externalMetadataColumnId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
-                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of last_name]" />
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of last_name]" />
                     <inputColumn
                       refId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of role]"
                       cachedCodepage="1252"
@@ -8520,36 +8521,35 @@ where [refTable].[id] = ?</property>
                       cachedLength="10"
                       cachedName="Copy of role"
                       externalMetadataColumnId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[role]"
-                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of role]" />
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of role]" />
                     <inputColumn
                       refId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of id]"
                       cachedDataType="i4"
                       cachedName="Copy of id"
                       externalMetadataColumnId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
-                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of id]" />
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of id]" />
                     <inputColumn
                       refId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of major]"
                       cachedDataType="i4"
                       cachedName="Copy of major"
                       externalMetadataColumnId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[major]"
-                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of major]" />
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of major]" />
                     <inputColumn
                       refId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of ssn]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="200"
                       cachedName="Copy of ssn"
-                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ssn]"
-                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of ssn]" />
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of ssn]" />
                     <inputColumn
                       refId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of password_hash]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="60"
+                      cachedLength="150"
                       cachedName="Copy of password_hash"
                       externalMetadataColumnId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[password_hash]"
-                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of password_hash]" />
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of password_hash]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -9200,7 +9200,7 @@ where [refTable].[id] = ?</property>
                       refId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of password_hash]"
                       codePage="1252"
                       dataType="str"
-                      length="60"
+                      length="150"
                       lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of password_hash]"
                       name="Copy of password_hash">
                       <properties>
@@ -9209,6 +9209,302 @@ where [refTable].[id] = ?</property>
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\users\Sort.Outputs[Sort Output].Columns[Copy of password_hash]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\users\Sort 2"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 2"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\users\Sort 2.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\users\Sort 2.Inputs[Sort Input].Columns[Copy of role]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Copy of role"
+                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of role]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\users\Sort 2.Inputs[Sort Input].Columns[Copy of first_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Copy of first_name"
+                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of first_name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\users\Sort 2.Inputs[Sort Input].Columns[Copy of last_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Copy of last_name"
+                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of last_name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\users\Sort 2.Inputs[Sort Input].Columns[Copy of ssn]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="Copy of ssn"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of ssn]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\users\Sort 2.Inputs[Sort Input].Columns[Copy of id]"
+                      cachedDataType="i4"
+                      cachedName="Copy of id"
+                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\users\Sort 2.Inputs[Sort Input].Columns[Copy of major]"
+                      cachedDataType="i4"
+                      cachedName="Copy of major"
+                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of major]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\users\Sort 2.Inputs[Sort Input].Columns[email]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="email"
+                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[email]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\users\Sort 2.Inputs[Sort Input].Columns[Copy of password_hash]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="150"
+                      cachedName="Copy of password_hash"
+                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of password_hash]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\users\Sort 2.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of role]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of role]"
+                      name="Copy of role">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of role]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of first_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of first_name]"
+                      name="Copy of first_name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of first_name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of last_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of last_name]"
+                      name="Copy of last_name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of last_name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of ssn]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of ssn]"
+                      name="Copy of ssn">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of ssn]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of id]"
+                      dataType="i4"
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of id]"
+                      name="Copy of id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of major]"
+                      dataType="i4"
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of major]"
+                      name="Copy of major">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of major]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\users\Sort 2.Outputs[Sort Output].Columns[email]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[email]"
+                      name="email"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\users\Sort 1.Outputs[Sort Output].Columns[email]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of password_hash]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of password_hash]"
+                      name="Copy of password_hash">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of password_hash]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -9529,9 +9825,14 @@ where [refTable].[id] = ?</property>
               startId="Package\users\Sort.Outputs[Sort Output]" />
             <path
               refId="Package\users.Paths[Sort Output1]"
-              endId="Package\users\Lookup.Inputs[Lookup Input]"
+              endId="Package\users\Sort 2.Inputs[Sort Input]"
               name="Sort Output"
               startId="Package\users\Sort 1.Outputs[Sort Output]" />
+            <path
+              refId="Package\users.Paths[Sort Output2]"
+              endId="Package\users\Lookup.Inputs[Lookup Input]"
+              name="Sort Output"
+              startId="Package\users\Sort 2.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -9541,11 +9842,11 @@ where [refTable].[id] = ?</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{EA0EEF96-DD23-4C83-A7AA-7B251953C46E}"
+      DTS:DTSID="{5B81D663-2C56-4FD9-A342-AAF16A03D4DD}"
       DTS:From="Package\departments"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\users" />
+      DTS:To="Package\courses" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
@@ -9557,11 +9858,11 @@ where [refTable].[id] = ?</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
-      DTS:DTSID="{EAF71B64-2868-445C-A77A-604CB5F7A532}"
-      DTS:From="Package\Grade"
+      DTS:DTSID="{95553C8F-4140-4D9B-B978-E66954D9787C}"
+      DTS:From="Package\courses"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
-      DTS:To="Package\courses" />
+      DTS:To="Package\users" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
@@ -9652,28 +9953,6 @@ where [refTable].[id] = ?</property>
           Id="Package\users"
           TopLeft="43.3333309657045,145.733332453436" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="94.5833314437834,104.999999692639">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40.7333327607973"
-              Start="0,0"
-              End="0,33.2333327607973">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.2333327607973" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="95.3333309657045,187.333332453436">
           <EdgeLayout.Curve>
@@ -9699,28 +9978,6 @@ where [refTable].[id] = ?</property>
                     Point3="-23.3999986340603,31.2999996655187" />
                   <mssgle:LineSegment
                     End="-23.3999986340603,47.0999993310374" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="75.833331739737,283.533331784474">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,55.4666659916764"
-              Start="0,0"
-              End="0,47.9666659916764">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,47.9666659916764" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9891,6 +10148,62 @@ where [refTable].[id] = ?</property>
                     Point3="34.9999975413083,-53.3999995118378" />
                   <mssgle:LineSegment
                     End="34.9999975413083,-91.2999990236755" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="95.7166648681794,104.999999692639">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,233.999998083511"
+              Start="0,0"
+              End="0,226.499998083511">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,226.499998083511" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="97.5999978144965,338.99999777615">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="13.733333151208,-151.666665322714"
+              Start="0,0"
+              End="13.733333151208,-144.166665322714">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-85.6212113270583" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-85.6212113270583"
+                    Point2="0,-89.6212113270583"
+                    Point3="4,-89.6212113270583" />
+                  <mssgle:LineSegment
+                    End="9.733333151208,-89.6212113270583" />
+                  <mssgle:CubicBezierSegment
+                    Point1="9.733333151208,-89.6212113270583"
+                    Point2="13.733333151208,-89.6212113270583"
+                    Point3="13.733333151208,-93.6212113270583" />
+                  <mssgle:LineSegment
+                    End="13.733333151208,-144.166665322714" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10753,9 +11066,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10813,9 +11124,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10849,9 +11158,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10897,7 +11204,7 @@ where [refTable].[id] = ?</property>
     design-time-name="Package\departments">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="136,41.6"
           Id="Package\departments\departments"
@@ -10945,9 +11252,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10969,9 +11274,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11005,9 +11308,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11794,40 +12095,6 @@ where [refTable].[id] = ?</property>
           Id="Package\users\Sort 1"
           TopLeft="462.499974730115,199.333331947194" />
         <EdgeLayout
-          Id="Package\users.Paths[Sort Output1]"
-          TopLeft="462.499974730115,220.133331947194">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-102.199988252918,-12.9999999095994"
-              Start="0,0"
-              End="-94.6999882529183,-12.9999999095994">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-47.0999941264591,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-47.0999941264591,0"
-                    Point2="-51.0999941264591,0"
-                    Point3="-51.0999941264591,-4" />
-                  <mssgle:LineSegment
-                    End="-51.0999941264591,-8.99999990959938" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-51.0999941264591,-8.99999990959938"
-                    Point2="-51.0999941264591,-12.9999999095994"
-                    Point3="-55.0999941264591,-12.9999999095994" />
-                  <mssgle:LineSegment
-                    End="-94.6999882529183,-12.9999999095994" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\users.Paths[Sort Output]"
           TopLeft="357.733328952392,323.999995172024">
           <EdgeLayout.Curve>
@@ -11859,6 +12126,42 @@ where [refTable].[id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\users.Paths[Lookup Match Output]"
+          TopLeft="303.899986477197,186.333332037595">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-211.299986581505,-73.7333327975542"
+              Start="0,0"
+              End="-211.299986581505,-66.2333327975542">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-32.8666663987771" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-32.8666663987771"
+                    Point2="0,-36.8666663987771"
+                    Point3="-4,-36.8666663987771" />
+                  <mssgle:LineSegment
+                    End="-207.299986581505,-36.8666663987771" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-207.299986581505,-36.8666663987771"
+                    Point2="-211.299986581505,-36.8666663987771"
+                    Point3="-211.299986581505,-40.8666663987771" />
+                  <mssgle:LineSegment
+                    End="-211.299986581505,-66.2333327975542" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-153.841380009503,-31.8666663987771,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11917,40 +12220,76 @@ where [refTable].[id] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\users\Sort 2"
+          TopLeft="432.499993555248,104.499998621643" />
         <EdgeLayout
-          Id="Package\users.Paths[Lookup Match Output]"
-          TopLeft="303.899986477197,186.333332037595">
+          Id="Package\users.Paths[Sort Output1]"
+          TopLeft="515.699974730115,199.333331947194">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-211.299986581505,-73.7333327975542"
+              EndConnector="-29.9999811748672,-53.2333333255514"
               Start="0,0"
-              End="-211.299986581505,-66.2333327975542">
+              End="-29.9999811748672,-45.7333333255514">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-32.8666663987771" />
+                    End="0,-22.6166666627757" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-32.8666663987771"
-                    Point2="0,-36.8666663987771"
-                    Point3="-4,-36.8666663987771" />
+                    Point1="0,-22.6166666627757"
+                    Point2="0,-26.6166666627757"
+                    Point3="-4,-26.6166666627757" />
                   <mssgle:LineSegment
-                    End="-207.299986581505,-36.8666663987771" />
+                    End="-25.9999811748672,-26.6166666627757" />
                   <mssgle:CubicBezierSegment
-                    Point1="-207.299986581505,-36.8666663987771"
-                    Point2="-211.299986581505,-36.8666663987771"
-                    Point3="-211.299986581505,-40.8666663987771" />
+                    Point1="-25.9999811748672,-26.6166666627757"
+                    Point2="-29.9999811748672,-26.6166666627757"
+                    Point3="-29.9999811748672,-30.6166666627757" />
                   <mssgle:LineSegment
-                    End="-211.299986581505,-66.2333327975542" />
+                    End="-29.9999811748672,-45.7333333255514" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-153.841380009503,-31.8666663987771,96.3827734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\users.Paths[Sort Output2]"
+          TopLeft="469.299993555248,146.099998621643">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-147.933340411384,40.2333334159524"
+              Start="0,0"
+              End="-147.933340411384,32.7333334159524">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.1373649965943" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.1373649965943"
+                    Point2="0,20.1373649965943"
+                    Point3="-4,20.1373649965943" />
+                  <mssgle:LineSegment
+                    End="-143.933340411384,20.1373649965943" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-143.933340411384,20.1373649965943"
+                    Point2="-147.933340411384,20.1373649965943"
+                    Point3="-147.933340411384,24.1373649965943" />
+                  <mssgle:LineSegment
+                    End="-147.933340411384,32.7333334159524" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11975,7 +12314,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>

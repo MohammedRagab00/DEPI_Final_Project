@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="50"
-  DTS:VersionGUID="{46970D42-2CAC-4260-AB99-B16A296FE21C}">
+  DTS:VersionBuild="57"
+  DTS:VersionGUID="{A51E5F38-9022-46E0-BA7A-2BCDDD299DAC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -95,7 +95,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="semester"
-              DTS:DTSID="{9F633CD5-3EC8-416A-8C54-0BAE0E1E748B}"
+              DTS:DTSID="{367C301B-4BA1-41BE-8671-4393942DE8E5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -104,7 +104,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="course_id"
-              DTS:DTSID="{A780AF5B-992C-44BE-935D-753166A473B8}"
+              DTS:DTSID="{9F4B827B-22D6-4B52-A2D9-470B3D96CBF6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -113,16 +113,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="student_id"
-              DTS:DTSID="{0B20759A-2454-4428-B364-B074DE8EA1C8}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="grade"
-              DTS:DTSID="{A67F5E47-5A5D-4989-880F-766ECE607731}"
+              DTS:DTSID="{C7D782A2-169F-4F88-A386-6ED04FFD790E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -130,8 +121,8 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="gpa_points"
-              DTS:DTSID="{DCF49EEA-ED9D-410B-BCE7-BAE08565C4E5}"
+              DTS:ObjectName="grade"
+              DTS:DTSID="{50897236-4AF6-476E-AC1A-945DEE4FE8CF}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -329,7 +320,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6i3dL+t5WU6+zzxEB6jLKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABNdAHDoKcfYNE10ifWh/aQBMRbCgdMvS3O/cdQxZVejAAAAAAOgAAAAAIAACAAAABS/Sh6fsu67+VMUsWeWi+mHXjb4eQVPFtQnPHkIIDUbTAAAAD1eDC32nWdv1eVp+J9kAbr6Bz/t64tOQrnDyasn8b8jayBApphYkd93IVu2inAVpxAAAAA7ZI6Ns5yio3xRgpio1QCGUEEveh5nnqCclhHgUmFaHqjKNT5lCQY2iM6uksAJhRWKJc3V0I89tBWLm2zWMfLyg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6i3dL+t5WU6+zzxEB6jLKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC2WbkwCxm3RJoy5RKGFY8OFugHBCzceh46GVMJyUXcLwAAAAAOgAAAAAIAACAAAAB8nGN9FhvM1Qn/4+6p9lKseXosNZUcIyU0ksYSXvYHOTAAAAA8J/b4xFIYcGPw/CKuheVMBw6w0dzqEJi4B5/GLFt8VbwUlIUFE8s320TdmZH4fn9AAAAAbAsc3h5On/3O2dwgka1+wJ+Kf3n/D/x8GRSqefTBoME7njj8Pb/aMhFHyhLjzMsIsK8ez1CUwkiUswNjpemevw</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1562,28 +1553,6 @@ where [refTable].[id] = ?</property>
                           name="UseBinaryFormat">false</property>
                       </properties>
                     </outputColumn>
-                    <outputColumn
-                      refId="Package\Course_grade\Course_grade.Outputs[Flat File Source Output].Columns[gpa_points]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Course_grade\Course_grade.Outputs[Flat File Source Output].ExternalColumns[gpa_points]"
-                      length="50"
-                      lineageId="Package\Course_grade\Course_grade.Outputs[Flat File Source Output].Columns[gpa_points]"
-                      name="gpa_points"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1611,12 +1580,6 @@ where [refTable].[id] = ?</property>
                       dataType="str"
                       length="50"
                       name="grade" />
-                    <externalMetadataColumn
-                      refId="Package\Course_grade\Course_grade.Outputs[Flat File Source Output].ExternalColumns[gpa_points]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="gpa_points" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1661,19 +1624,19 @@ where [refTable].[id] = ?</property>
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Course_grade\Data Conversion.Inputs[Data Conversion Input].Columns[course_id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="course_id"
-                      lineageId="Package\Course_grade\Course_grade.Outputs[Flat File Source Output].Columns[course_id]" />
-                    <inputColumn
                       refId="Package\Course_grade\Data Conversion.Inputs[Data Conversion Input].Columns[semester]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="semester"
                       lineageId="Package\Course_grade\Course_grade.Outputs[Flat File Source Output].Columns[semester]" />
+                    <inputColumn
+                      refId="Package\Course_grade\Data Conversion.Inputs[Data Conversion Input].Columns[course_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="course_id"
+                      lineageId="Package\Course_grade\Course_grade.Outputs[Flat File Source Output].Columns[course_id]" />
                     <inputColumn
                       refId="Package\Course_grade\Data Conversion.Inputs[Data Conversion Input].Columns[student_id]"
                       cachedCodepage="1252"
@@ -1688,13 +1651,6 @@ where [refTable].[id] = ?</property>
                       cachedLength="50"
                       cachedName="grade"
                       lineageId="Package\Course_grade\Course_grade.Outputs[Flat File Source Output].Columns[grade]" />
-                    <inputColumn
-                      refId="Package\Course_grade\Data Conversion.Inputs[Data Conversion Input].Columns[gpa_points]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="gpa_points"
-                      lineageId="Package\Course_grade\Course_grade.Outputs[Flat File Source Output].Columns[gpa_points]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1706,6 +1662,26 @@ where [refTable].[id] = ?</property>
                   name="Data Conversion Output"
                   synchronousInputId="Package\Course_grade\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
+                    <outputColumn
+                      refId="Package\Course_grade\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of semester]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Course_grade\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of semester]"
+                      name="Copy of semester"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Course_grade\Course_grade.Outputs[Flat File Source Output].Columns[semester]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
                       refId="Package\Course_grade\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of course_id]"
                       codePage="1252"
@@ -1722,26 +1698,6 @@ where [refTable].[id] = ?</property>
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\Course_grade\Course_grade.Outputs[Flat File Source Output].Columns[course_id]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Course_grade\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of semester]"
-                      dataType="dbDate"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Course_grade\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of semester]"
-                      name="Copy of semester"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Course_grade\Course_grade.Outputs[Flat File Source Output].Columns[semester]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -1782,26 +1738,6 @@ where [refTable].[id] = ?</property>
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\Course_grade\Course_grade.Outputs[Flat File Source Output].Columns[grade]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Course_grade\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of gpa_points]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Course_grade\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of gpa_points]"
-                      name="Copy of gpa_points"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Course_grade\Course_grade.Outputs[Flat File Source Output].Columns[gpa_points]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -1892,7 +1828,7 @@ where [refTable].[id] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Course_grade\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of course_id]};</property>
+                  name="ParameterMap">#{Package\Course_grade\Sort.Outputs[Sort Output].Columns[Copy of course_id]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2031,12 +1967,12 @@ where [refTable].[id] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="first_name" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="last_name" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="email_address" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ssn" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="password_hash" dataType="DT_STR" length="60" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="major" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="role" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="first_name" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="last_name" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="email_address" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ssn" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="password_hash" dataType="DT_STR" length="150" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="major" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="role" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Course_grade\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of student_id]};</property>
+                  name="ParameterMap">#{Package\Course_grade\Sort.Outputs[Sort Output].Columns[Copy of student_id]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2222,12 +2158,6 @@ where [refTable].[id] = ?</property>
                       cachedName="Copy of grade"
                       externalMetadataColumnId="Package\Course_grade\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[grade]"
                       lineageId="Package\Course_grade\Sort.Outputs[Sort Output].Columns[Copy of grade]" />
-                    <inputColumn
-                      refId="Package\Course_grade\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of gpa_points]"
-                      cachedDataType="r8"
-                      cachedName="Copy of gpa_points"
-                      externalMetadataColumnId="Package\Course_grade\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gpa_points]"
-                      lineageId="Package\Course_grade\Sort.Outputs[Sort Output].Columns[Copy of gpa_points]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2372,22 +2302,6 @@ where [refTable].[id] = ?</property>
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
-                    <inputColumn
-                      refId="Package\Course_grade\Sort.Inputs[Sort Input].Columns[Copy of gpa_points]"
-                      cachedDataType="r8"
-                      cachedName="Copy of gpa_points"
-                      lineageId="Package\Course_grade\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of gpa_points]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -2453,19 +2367,6 @@ where [refTable].[id] = ?</property>
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\Course_grade\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of grade]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Course_grade\Sort.Outputs[Sort Output].Columns[Copy of gpa_points]"
-                      dataType="r8"
-                      lineageId="Package\Course_grade\Sort.Outputs[Sort Output].Columns[Copy of gpa_points]"
-                      name="Copy of gpa_points">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Course_grade\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of gpa_points]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -8360,7 +8261,7 @@ where [refTable].[id] = ?</property>
                       refId="Package\users\Lookup.Inputs[Lookup Input].Columns[Copy of major]"
                       cachedDataType="i4"
                       cachedName="Copy of major"
-                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of major]">
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of major]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -8495,8 +8396,9 @@ where [refTable].[id] = ?</property>
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="email"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[email_address]"
-                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[email]" />
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[email]" />
                     <inputColumn
                       refId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of first_name]"
                       cachedCodepage="1252"
@@ -8504,7 +8406,7 @@ where [refTable].[id] = ?</property>
                       cachedLength="20"
                       cachedName="Copy of first_name"
                       externalMetadataColumnId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
-                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of first_name]" />
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of first_name]" />
                     <inputColumn
                       refId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of last_name]"
                       cachedCodepage="1252"
@@ -8512,7 +8414,7 @@ where [refTable].[id] = ?</property>
                       cachedLength="20"
                       cachedName="Copy of last_name"
                       externalMetadataColumnId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
-                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of last_name]" />
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of last_name]" />
                     <inputColumn
                       refId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of role]"
                       cachedCodepage="1252"
@@ -8520,36 +8422,35 @@ where [refTable].[id] = ?</property>
                       cachedLength="10"
                       cachedName="Copy of role"
                       externalMetadataColumnId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[role]"
-                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of role]" />
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of role]" />
                     <inputColumn
                       refId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of id]"
                       cachedDataType="i4"
                       cachedName="Copy of id"
                       externalMetadataColumnId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
-                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of id]" />
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of id]" />
                     <inputColumn
                       refId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of major]"
                       cachedDataType="i4"
                       cachedName="Copy of major"
                       externalMetadataColumnId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[major]"
-                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of major]" />
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of major]" />
                     <inputColumn
                       refId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of ssn]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="200"
                       cachedName="Copy of ssn"
-                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ssn]"
-                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of ssn]" />
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of ssn]" />
                     <inputColumn
                       refId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of password_hash]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="60"
+                      cachedLength="150"
                       cachedName="Copy of password_hash"
                       externalMetadataColumnId="Package\users\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[password_hash]"
-                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of password_hash]" />
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of password_hash]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -9200,7 +9101,7 @@ where [refTable].[id] = ?</property>
                       refId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of password_hash]"
                       codePage="1252"
                       dataType="str"
-                      length="60"
+                      length="150"
                       lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of password_hash]"
                       name="Copy of password_hash">
                       <properties>
@@ -9209,6 +9110,302 @@ where [refTable].[id] = ?</property>
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\users\Sort.Outputs[Sort Output].Columns[Copy of password_hash]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\users\Sort 2"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 2"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\users\Sort 2.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\users\Sort 2.Inputs[Sort Input].Columns[Copy of role]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Copy of role"
+                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of role]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\users\Sort 2.Inputs[Sort Input].Columns[Copy of first_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Copy of first_name"
+                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of first_name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\users\Sort 2.Inputs[Sort Input].Columns[Copy of last_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Copy of last_name"
+                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of last_name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\users\Sort 2.Inputs[Sort Input].Columns[Copy of ssn]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="Copy of ssn"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of ssn]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\users\Sort 2.Inputs[Sort Input].Columns[Copy of id]"
+                      cachedDataType="i4"
+                      cachedName="Copy of id"
+                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\users\Sort 2.Inputs[Sort Input].Columns[Copy of major]"
+                      cachedDataType="i4"
+                      cachedName="Copy of major"
+                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of major]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\users\Sort 2.Inputs[Sort Input].Columns[email]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="email"
+                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[email]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\users\Sort 2.Inputs[Sort Input].Columns[Copy of password_hash]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="150"
+                      cachedName="Copy of password_hash"
+                      lineageId="Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of password_hash]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\users\Sort 2.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of role]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of role]"
+                      name="Copy of role">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of role]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of first_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of first_name]"
+                      name="Copy of first_name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of first_name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of last_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of last_name]"
+                      name="Copy of last_name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of last_name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of ssn]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of ssn]"
+                      name="Copy of ssn">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of ssn]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of id]"
+                      dataType="i4"
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of id]"
+                      name="Copy of id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of major]"
+                      dataType="i4"
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of major]"
+                      name="Copy of major">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of major]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\users\Sort 2.Outputs[Sort Output].Columns[email]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[email]"
+                      name="email"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\users\Sort 1.Outputs[Sort Output].Columns[email]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of password_hash]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      lineageId="Package\users\Sort 2.Outputs[Sort Output].Columns[Copy of password_hash]"
+                      name="Copy of password_hash">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\users\Sort 1.Outputs[Sort Output].Columns[Copy of password_hash]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -9529,9 +9726,14 @@ where [refTable].[id] = ?</property>
               startId="Package\users\Sort.Outputs[Sort Output]" />
             <path
               refId="Package\users.Paths[Sort Output1]"
-              endId="Package\users\Lookup.Inputs[Lookup Input]"
+              endId="Package\users\Sort 2.Inputs[Sort Input]"
               name="Sort Output"
               startId="Package\users\Sort 1.Outputs[Sort Output]" />
+            <path
+              refId="Package\users.Paths[Sort Output2]"
+              endId="Package\users\Lookup.Inputs[Lookup Input]"
+              name="Sort Output"
+              startId="Package\users\Sort 2.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -9652,28 +9854,6 @@ where [refTable].[id] = ?</property>
           Id="Package\users"
           TopLeft="43.3333309657045,145.733332453436" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="94.5833314437834,104.999999692639">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40.7333327607973"
-              Start="0,0"
-              End="0,33.2333327607973">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.2333327607973" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="95.3333309657045,187.333332453436">
           <EdgeLayout.Curve>
@@ -9699,28 +9879,6 @@ where [refTable].[id] = ?</property>
                     Point3="-23.3999986340603,31.2999996655187" />
                   <mssgle:LineSegment
                     End="-23.3999986340603,47.0999993310374" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="75.833331739737,283.533331784474">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,55.4666659916764"
-              Start="0,0"
-              End="0,47.9666659916764">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,47.9666659916764" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9899,6 +10057,50 @@ where [refTable].[id] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="75.833331739737,283.533331784474">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55.4666659916764"
+              Start="0,0"
+              End="0,47.9666659916764">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.9666659916764" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="94.5833314437834,104.999999692639">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.7333327607973"
+              Start="0,0"
+              End="0,33.2333327607973">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.2333327607973" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -9907,10 +10109,6 @@ where [refTable].[id] = ?</property>
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="156,41.6"
-          Id="Package\Course_grade\Data Conversion"
-          TopLeft="152.999997720122,156.999997660518" />
         <NodeLayout
           Size="120.8,41.6"
           Id="Package\Course_grade\Lookup 1"
@@ -9923,10 +10121,6 @@ where [refTable].[id] = ?</property>
           Size="112.8,41.6"
           Id="Package\Course_grade\Lookup"
           TopLeft="424.166643491223,250.466664924953" />
-        <NodeLayout
-          Size="144,41.6"
-          Id="Package\Course_grade\Course_grade"
-          TopLeft="99.9999994039536,261.999996989965" />
         <NodeLayout
           Size="171.2,41.6"
           Id="Package\Course_grade\OLE DB Destination"
@@ -9956,9 +10150,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10033,76 +10225,80 @@ where [refTable].[id] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="144,41.6"
+          Id="Package\Course_grade\Course_grade"
+          TopLeft="144.999997839332,380.999994322658" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\Course_grade\Data Conversion"
+          TopLeft="178.999997332692,229.399996677041" />
         <EdgeLayout
           Id="Package\Course_grade.Paths[Flat File Source Output]"
-          TopLeft="171.999999403954,261.999996989965">
+          TopLeft="216.999997839332,380.999994322658">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="58.9999983161688,-63.3999993294477"
+              EndConnector="39.9999994933605,-109.999997645616"
               Start="0,0"
-              End="58.9999983161688,-55.8999993294477">
+              End="39.9999994933605,-102.499997645616">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-27.6999996647239" />
+                    End="0,-50.9999988228082" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-27.6999996647239"
-                    Point2="0,-31.6999996647239"
-                    Point3="4,-31.6999996647239" />
+                    Point1="0,-50.9999988228082"
+                    Point2="0,-54.9999988228082"
+                    Point3="4,-54.9999988228082" />
                   <mssgle:LineSegment
-                    End="54.9999983161688,-31.6999996647239" />
+                    End="35.9999994933605,-54.9999988228082" />
                   <mssgle:CubicBezierSegment
-                    Point1="54.9999983161688,-31.6999996647239"
-                    Point2="58.9999983161688,-31.6999996647239"
-                    Point3="58.9999983161688,-35.6999996647239" />
+                    Point1="35.9999994933605,-54.9999988228082"
+                    Point2="39.9999994933605,-54.9999988228082"
+                    Point3="39.9999994933605,-58.9999988228082" />
                   <mssgle:LineSegment
-                    End="58.9999983161688,-55.8999993294477" />
+                    End="39.9999994933605,-102.499997645616" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Course_grade.Paths[Data Conversion Output]"
-          TopLeft="255.666664386789,198.599997660518">
+          TopLeft="281.666663999359,270.999996677041">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="111.466651553579,104.733333563473"
+              EndConnector="70.5333186076758,32.3333345469499"
               Start="0,0"
-              End="111.466651553579,97.2333335634732">
+              End="70.5333186076758,24.8333345469499">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.5313029699384" />
+                    End="0,12.0466462513084" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,38.5313029699384"
-                    Point2="0,42.5313029699384"
-                    Point3="4,42.5313029699384" />
+                    Point1="0,12.0466462513084"
+                    Point2="0,16.0466462513084"
+                    Point3="4,16.0466462513084" />
                   <mssgle:LineSegment
-                    End="107.466651553579,42.5313029699384" />
+                    End="66.5333186076758,16.0466462513084" />
                   <mssgle:CubicBezierSegment
-                    Point1="107.466651553579,42.5313029699384"
-                    Point2="111.466651553579,42.5313029699384"
-                    Point3="111.466651553579,46.5313029699384" />
+                    Point1="66.5333186076758,16.0466462513084"
+                    Point2="70.5333186076758,16.0466462513084"
+                    Point3="70.5333186076758,20.0466462513084" />
                   <mssgle:LineSegment
-                    End="111.466651553579,97.2333335634732" />
+                    End="70.5333186076758,24.8333345469499" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10114,7 +10310,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -10124,7 +10320,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10137,7 +10333,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -10147,7 +10343,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10558,9 +10754,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10594,9 +10788,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10630,9 +10822,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10753,9 +10943,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10813,9 +11001,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10849,9 +11035,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10897,7 +11081,7 @@ where [refTable].[id] = ?</property>
     design-time-name="Package\departments">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="136,41.6"
           Id="Package\departments\departments"
@@ -10945,9 +11129,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10969,9 +11151,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11005,9 +11185,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11794,40 +11972,6 @@ where [refTable].[id] = ?</property>
           Id="Package\users\Sort 1"
           TopLeft="462.499974730115,199.333331947194" />
         <EdgeLayout
-          Id="Package\users.Paths[Sort Output1]"
-          TopLeft="462.499974730115,220.133331947194">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-102.199988252918,-12.9999999095994"
-              Start="0,0"
-              End="-94.6999882529183,-12.9999999095994">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-47.0999941264591,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-47.0999941264591,0"
-                    Point2="-51.0999941264591,0"
-                    Point3="-51.0999941264591,-4" />
-                  <mssgle:LineSegment
-                    End="-51.0999941264591,-8.99999990959938" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-51.0999941264591,-8.99999990959938"
-                    Point2="-51.0999941264591,-12.9999999095994"
-                    Point3="-55.0999941264591,-12.9999999095994" />
-                  <mssgle:LineSegment
-                    End="-94.6999882529183,-12.9999999095994" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\users.Paths[Sort Output]"
           TopLeft="357.733328952392,323.999995172024">
           <EdgeLayout.Curve>
@@ -11859,6 +12003,42 @@ where [refTable].[id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\users.Paths[Lookup Match Output]"
+          TopLeft="303.899986477197,186.333332037595">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-211.299986581505,-73.7333327975542"
+              Start="0,0"
+              End="-211.299986581505,-66.2333327975542">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-32.8666663987771" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-32.8666663987771"
+                    Point2="0,-36.8666663987771"
+                    Point3="-4,-36.8666663987771" />
+                  <mssgle:LineSegment
+                    End="-207.299986581505,-36.8666663987771" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-207.299986581505,-36.8666663987771"
+                    Point2="-211.299986581505,-36.8666663987771"
+                    Point3="-211.299986581505,-40.8666663987771" />
+                  <mssgle:LineSegment
+                    End="-211.299986581505,-66.2333327975542" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-153.841380009503,-31.8666663987771,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11917,40 +12097,76 @@ where [refTable].[id] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\users\Sort 2"
+          TopLeft="432.499993555248,104.499998621643" />
         <EdgeLayout
-          Id="Package\users.Paths[Lookup Match Output]"
-          TopLeft="303.899986477197,186.333332037595">
+          Id="Package\users.Paths[Sort Output1]"
+          TopLeft="515.699974730115,199.333331947194">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-211.299986581505,-73.7333327975542"
+              EndConnector="-29.9999811748672,-53.2333333255514"
               Start="0,0"
-              End="-211.299986581505,-66.2333327975542">
+              End="-29.9999811748672,-45.7333333255514">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-32.8666663987771" />
+                    End="0,-22.6166666627757" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-32.8666663987771"
-                    Point2="0,-36.8666663987771"
-                    Point3="-4,-36.8666663987771" />
+                    Point1="0,-22.6166666627757"
+                    Point2="0,-26.6166666627757"
+                    Point3="-4,-26.6166666627757" />
                   <mssgle:LineSegment
-                    End="-207.299986581505,-36.8666663987771" />
+                    End="-25.9999811748672,-26.6166666627757" />
                   <mssgle:CubicBezierSegment
-                    Point1="-207.299986581505,-36.8666663987771"
-                    Point2="-211.299986581505,-36.8666663987771"
-                    Point3="-211.299986581505,-40.8666663987771" />
+                    Point1="-25.9999811748672,-26.6166666627757"
+                    Point2="-29.9999811748672,-26.6166666627757"
+                    Point3="-29.9999811748672,-30.6166666627757" />
                   <mssgle:LineSegment
-                    End="-211.299986581505,-66.2333327975542" />
+                    End="-29.9999811748672,-45.7333333255514" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-153.841380009503,-31.8666663987771,96.3827734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\users.Paths[Sort Output2]"
+          TopLeft="469.299993555248,146.099998621643">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-147.933340411384,40.2333334159524"
+              Start="0,0"
+              End="-147.933340411384,32.7333334159524">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.1373649965943" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.1373649965943"
+                    Point2="0,20.1373649965943"
+                    Point3="-4,20.1373649965943" />
+                  <mssgle:LineSegment
+                    End="-143.933340411384,20.1373649965943" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-143.933340411384,20.1373649965943"
+                    Point2="-147.933340411384,20.1373649965943"
+                    Point3="-147.933340411384,24.1373649965943" />
+                  <mssgle:LineSegment
+                    End="-147.933340411384,32.7333334159524" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11975,7 +12191,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
