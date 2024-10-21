@@ -11,17 +11,20 @@ load_dotenv()
 connection_string = os.getenv("DB_CONNECTION_STRING")
 engine = create_engine(connection_string)
 
-# Hardcode the CSV file paths
+# Base directory for the CSV files using a relative path
+base_directory = "Ignore\\Week2\\Data\\"
+
+# CSV file paths using a relative path
 CSV_FILE_PATHS = {
-    "departments": "C:\\Study_02\\Material\\DataEngineer\\Final_Project\\Ignore\\Week2\\Data\\departments.csv",
-    "users": "C:\\Study_02\\Material\\DataEngineer\\Final_Project\\Ignore\\Week2\\Data\\users.csv",
-    "grade": "C:\\Study_02\\Material\\DataEngineer\\Final_Project\\Ignore\\Week2\\Data\\Grade.csv",
-    "courses": "C:\\Study_02\\Material\\DataEngineer\\Final_Project\\Ignore\\Week2\\Data\\courses.csv",
-    "course_prerequisite": "C:\\Study_02\\Material\\DataEngineer\\Final_Project\\Ignore\\Week2\\Data\\Course_prerequisite.csv",
-    "place": "C:\\Study_02\\Material\\DataEngineer\\Final_Project\\Ignore\\Week2\\Data\\Place.csv",
-    "sections": "C:\\Study_02\\Material\\DataEngineer\\Final_Project\\Ignore\\Week2\\Data\\sections.csv",
-    "course_registered": "C:\\Study_02\\Material\\DataEngineer\\Final_Project\\Ignore\\Week2\\Data\\Course_registered.csv",
-    "course_grade": "C:\\Study_02\\Material\\DataEngineer\\Final_Project\\Ignore\\Week2\\Data\\Course_grade.csv",
+    "departments": os.path.join(base_directory, "departments.csv"),
+    "users": os.path.join(base_directory, "users.csv"),
+    "grade": os.path.join(base_directory, "Grade.csv"),
+    "courses": os.path.join(base_directory, "courses.csv"),
+    "course_prerequisite": os.path.join(base_directory, "Course_prerequisite.csv"),
+    "place": os.path.join(base_directory, "Place.csv"),
+    "sections": os.path.join(base_directory, "sections.csv"),
+    "course_registered": os.path.join(base_directory, "Course_registered.csv"),
+    "course_grade": os.path.join(base_directory, "Course_grade.csv"),
 }
 
 # Set up logging

@@ -10,34 +10,37 @@ load_dotenv()
 connection_string = os.getenv("DB_CONNECTION_STRING")
 engine = create_engine(connection_string)
 
-# Load CSV files in the specified order
-departments = pd.read_csv(
-    "C:\\Study_02\\Material\\DataEngineer\\Final_Project\\Ignore\\Week2\\Data\\departments.csv"
-)
-users = pd.read_csv(
-    "C:\\Study_02\\Material\\DataEngineer\\Final_Project\\Ignore\\Week2\\Data\\users.csv"
-)
-grade = pd.read_csv(
-    "C:\\Study_02\\Material\\DataEngineer\\Final_Project\\Ignore\\Week2\\Data\\Grade.csv"
-)
-courses = pd.read_csv(
-    "C:\\Study_02\\Material\\DataEngineer\\Final_Project\\Ignore\\Week2\\Data\\courses.csv"
-)
-course_prerequisite = pd.read_csv(
-    "C:\\Study_02\\Material\\DataEngineer\\Final_Project\\Ignore\\Week2\\Data\\Course_prerequisite.csv"
-)
-place = pd.read_csv(
-    "C:\\Study_02\\Material\\DataEngineer\\Final_Project\\Ignore\\Week2\\Data\\Place.csv"
-)
-sections = pd.read_csv(
-    "C:\\Study_02\\Material\\DataEngineer\\Final_Project\\Ignore\\Week2\\Data\\sections.csv"
-)
-course_registered = pd.read_csv(
-    "C:\\Study_02\\Material\\DataEngineer\\Final_Project\\Ignore\\Week2\\Data\\Course_registered.csv"
-)
-course_grade = pd.read_csv(
-    "C:\\Study_02\\Material\\DataEngineer\\Final_Project\\Ignore\\Week2\\Data\\Course_grade.csv"
-)
+# Base directory for the CSV files using a relative path
+base_directory = "Ignore\\Week2\\Data\\"
+
+# List of CSV file paths
+file_names = [
+    "departments.csv",
+    "users.csv",
+    "Grade.csv",
+    "courses.csv",
+    "Course_prerequisite.csv",
+    "Place.csv",
+    "sections.csv",
+    "Course_registered.csv",
+    "Course_grade.csv",
+]
+
+# Load CSV files into a dictionary
+dataframes = {
+    name.split(".")[0]: pd.read_csv(base_directory + name) for name in file_names
+}
+
+# Accessing dataframes
+departments = dataframes["departments"]
+users = dataframes["users"]
+grade = dataframes["Grade"]
+courses = dataframes["courses"]
+course_prerequisite = dataframes["Course_prerequisite"]
+place = dataframes["Place"]
+sections = dataframes["sections"]
+course_registered = dataframes["Course_registered"]
+course_grade = dataframes["Course_grade"]
 
 # Transform Data
 # Check if the GradeFact table has the GPA_Points column
@@ -49,9 +52,9 @@ with engine.connect() as conn:
         > 0
     )
 
-if has_gpa_points_column:
-    # Drop the existing GPA_Points column from the GradeFact table
-    conn.execute("ALTER TABLE GradeFact DROP COLUMN GPA_Points")
+    if has_gpa_points_column:
+        # Drop the existing GPA_Points column from the GradeFact table
+        conn.execute("ALTER TABLE GradeFact DROP COLUMN GPA_Points")
 
 # Example transformation for GradeFact
 course_grade["GPA_Points"] = course_grade["grade"] * 0.1  # Example calculation
@@ -64,7 +67,7 @@ grade_fact = course_grade.rename(
     }
 )
 
-# Load data into data warehouse tables
+# Load data into the GradeFact table
 grade_fact.to_sql("GradeFact", con=engine, if_exists="append", index=False)
 
 # Transform and load data for dimension tables
