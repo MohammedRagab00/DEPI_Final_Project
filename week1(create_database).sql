@@ -18,7 +18,7 @@ CREATE TABLE Users (
     last_name VARCHAR(20) NOT NULL,
     email_address VARCHAR(50) NOT NULL UNIQUE,
     ssn VARCHAR(200) NOT NULL UNIQUE,
-    password_hash VARCHAR(150) NOT NULL,
+    password_hash NVARCHAR(150) NOT NULL,
     major INTEGER,
     role VARCHAR(10) NOT NULL DEFAULT 'Unassigned',
     FOREIGN KEY (major) REFERENCES Department(id),

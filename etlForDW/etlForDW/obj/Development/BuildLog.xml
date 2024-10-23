@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
-    <Name>IntegrationServicesProject</Name>
-    <LastWriteTime>2024-10-21T19:08:03.2697516Z</LastWriteTime>
+    <Name>etlForDW</Name>
+    <LastWriteTime>2024-10-23T17:10:51.0610319Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Package.dtsx</Name>
-      <LastWriteTime>2024-10-21T20:28:02.665804Z</LastWriteTime>
+      <LastWriteTime>2024-10-23T17:12:10.4608142Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

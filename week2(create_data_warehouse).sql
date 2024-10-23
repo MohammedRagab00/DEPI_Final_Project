@@ -7,9 +7,10 @@ CREATE TABLE GradeFact (
   CourseID VARCHAR(10),
   Semester DATE,
   Grade INT,
-  GPA_Points DECIMAL(3, 2),
+  GPA_Points DECIMAL(7, 4),
   InstructorID INT
 );
+
 
 --Dimension Tables:
 
@@ -19,8 +20,7 @@ CREATE TABLE StudentDim (
   FirstName VARCHAR(20),
   LastName VARCHAR(20),
   EmailAddress VARCHAR(50),
-  Major INT,
-  Role VARCHAR(10)
+  Major INT
 );
 
 --CourseDim
@@ -39,4 +39,3 @@ CREATE TABLE InstructorDim (
   EmailAddress VARCHAR(50),
   Department INT
 );
-
