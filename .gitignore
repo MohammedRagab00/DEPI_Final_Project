@@ -54,6 +54,17 @@ TestResults/
 *.pubxml
 *.publishproj
 
+# SSIS specific files
+*.dtproj.user
+*.dtproj
+*.dtsx
+*.params
+
+# Sensitive SSIS properties
+*.password
+*.verifier
+*.key
+
 # Your specific files
 ETL_01.py
 ETL_02.py
