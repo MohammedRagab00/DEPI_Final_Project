@@ -1,4 +1,4 @@
-# /Ignore
+/Ignore
 
 # Virtual environment
 env/
@@ -17,5 +17,47 @@ __pycache__/
 .DS_Store
 .vscode
 
+# Compiled and Deployed Packages
+*.ispac
+*.deploy
+
+# Build and Output Directories
+bin/
+obj/
+Debug/
+Release/
+
+# User-Specific Files
+*.suo
+*.user
+*.userosscache
+*.rsuser
+
+# Temporary and Log Files
+*.log
+*.tmp
+*.cachefile
+
+# Visual Studio Specific Files
+.vs/
+*.vscode/
+
+# Test Results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Other Configuration and Environment Files
+*.config
+*.settings
+*.pubxml
+*.publishproj
+
+# Your specific files
 ETL_01.py
 ETL_02.py
+/IntegrationServicesProject
+SQLQuery.sql
+requirements.txt
+toTruncate.sql
