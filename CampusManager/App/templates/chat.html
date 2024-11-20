@@ -1,0 +1,76 @@
+<!-- templates/chat.html -->
+{% extends "base.html" %}
+
+{% block title %}Chat & Summarization{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card bg-dark">
+                <div class="card-header">
+                    <h4>Arabic Text Summarization</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="inputText">Enter Arabic Text:</label>
+                        <textarea class="form-control bg-dark text-light" id="inputText" rows="6" dir="rtl"></textarea>
+                    </div>
+                    <button class="btn btn-primary" onclick="summarizeText()">Summarize</button>
+
+                    <div class="mt-4" id="resultSection" style="display: none;">
+                        <h5>Summary:</h5>
+                        <div class="card bg-secondary">
+                            <div class="card-body">
+                                <p id="summaryText" class="text-light" dir="rtl"></p>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <small class="text-muted">
+                                Original length: <span id="originalLength"></span> words |
+                                Summary length: <span id="summaryLength"></span> words
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function summarizeText() {
+        const text = document.getElementById('inputText').value;
+        if (!text) {
+            alert('Please enter some text to summarize');
+            return;
+        }
+
+        // Show loading state
+        document.getElementById('summaryText').innerText = 'Generating summary...';
+        document.getElementById('resultSection').style.display = 'block';
+
+        fetch('/api/summarize', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ text: text })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+                document.getElementById('summaryText').innerText = data.summary;
+                document.getElementById('originalLength').innerText = data.original_length;
+                document.getElementById('summaryLength').innerText = data.summary_length;
+                document.getElementById('resultSection').style.display = 'block';
+            })
+            .catch(error => {
+                alert('Error: ' + error.message);
+                document.getElementById('resultSection').style.display = 'none';
+            });
+    }
+</script>
+{% endblock %}

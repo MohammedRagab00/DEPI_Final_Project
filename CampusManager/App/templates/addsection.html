@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %} Admin Page {% endblock %}
+{% block content %}
+
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-register" style="color: white">
+            {{ form1.hidden_tag() }}
+
+            <br>
+            <h1 class="h3 mb-3 font-weight-normal">To create a section</h1>
+            <br />
+            {{ form1.course_id.label() }}
+            {{ form1.course_id(class="form-control", placeholder="Enter course id") }}
+            {{ form1.place.label() }}
+            {{ form1.place(class="form-control", placeholder="Enter place") }}
+            {{ form1.semester.label() }}
+            {{ form1.semester(class="form-control", placeholder="Enter semester") }}
+            {{ form1.type.label() }}
+            {{ form1.type(class="form-control", placeholder="Select type") }}
+            {{ form1.day.label() }}
+            {{ form1.day(class="form-control", placeholder="Select day") }}
+
+            <!-- Update to handle start_time and end_time -->
+            {{ form1.start_time.label() }}
+            {{ form1.start_time(class="form-control", placeholder="Enter start time") }}
+            {{ form1.end_time.label() }}
+            {{ form1.end_time(class="form-control", placeholder="Enter end time") }}
+
+            {{ form1.group.label() }}
+            {{ form1.group(class="form-control", placeholder="Enter group") }}
+            {{ form1.capacity.label() }}
+            {{ form1.capacity(class="form-control", placeholder="Enter capacity") }}
+            <br />
+
+            {{ form1.submit(class="btn btn-lg btn-block btn-primary") }}
+        </form>
+    </div>
+</body>
+{% endblock %}

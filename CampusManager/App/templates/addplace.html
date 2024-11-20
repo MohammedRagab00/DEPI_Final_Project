@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %} Admin Page {% endblock %}
+{% block content %}
+
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-register" style="color: white">
+            <!--To save us from attacks-->
+            {{ form1.hidden_tag() }}
+
+            <br>
+            <h1 class="h3 mb-3 font-weight-normal">To Add a Place</h1>
+            <br />
+            {{ form1.place_num.label() }}
+            {{ form1.place_num(class="form-control", placeholder="Enter place num") }}
+            {{ form1.department.label() }}
+            {{ form1.department(class="form-control", placeholder="Enter department num") }}
+            {{ form1.capacity.label() }}
+            {{form1.capacity(class="form-control", placeholder="Enter max capacity")}}
+            <br />
+
+            {{ form1.submit(class="btn btn-lg btn-block btn-primary") }}
+        </form>
+
+    </div>
+</body>
+{% endblock %}

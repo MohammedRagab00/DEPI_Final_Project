@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %} Register Page {% endblock %}
+{% block content %}
+
+<body class="text-center">
+  <div class="container">
+    <form method="POST" class="form-register" style="color: white">
+      <!--To save us from attacks-->
+      {{ form.hidden_tag() }}
+
+      <br>
+      <h1 class="h3 mb-3 font-weight-normal">Please Create your Account</h1>
+      <br />
+      {{ form.ssn.label() }}
+      {{ form.ssn(class="form-control", placeholder="Enter your ssn") }}
+      {{ form.first_name.label() }}
+      {{ form.first_name(class="form-control", placeholder="Enter your first name") }}
+      {{ form.last_name.label() }}
+      {{ form.last_name(class="form-control", placeholder="Enter your last name") }}
+      {{ form.email_address.label() }}
+      {{form.email_address(class="form-control", placeholder="Enter your email address")}}
+      {{ form.password1.label() }}
+      {{ form.password1(class="form-control", placeholder="Enter your password") }}
+      {{ form.password2.label() }}
+      {{form.password2(class="form-control", placeholder="Confirm your password")}}
+      <br />
+      <div class="checkbox mb-3">
+        <h6>Already have an account?</h6>
+        <a class="btn btn-sm btn-secondary" href="{{ url_for('login_page') }}">Login</a>
+      </div>
+      {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+    </form>
+  </div>
+</body>
+{% endblock %}
+
+<!-- 
+import os
+os.urandom(12).hex()
+# To get a secret Key
+
+-->

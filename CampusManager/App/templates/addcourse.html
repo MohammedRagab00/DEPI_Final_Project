@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %} Admin Page {% endblock %}
+{% block content %}
+
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-register" style="color: white">
+            <!--To save us from attacks-->
+            {{ form3.hidden_tag() }}
+
+            <br>
+            <h1 class="h3 mb-3 font-weight-normal">To Add a Course</h1>
+            <br />
+            {{ form3.id.label() }}
+            {{ form3.id(class="form-control", placeholder="Enter course id") }}
+            {{ form3.name.label() }}
+            {{ form3.name(class="form-control", placeholder="Enter course name") }}
+            {{ form3.department.label() }}
+            {{ form3.department(class="form-control", placeholder="Enter department number") }}
+            {{ form3.credit_hours.label() }}
+            {{form3.credit_hours(class="form-control", placeholder="Enter course credit hours")}}
+            <br />
+
+            {{ form3.submit(class="btn btn-lg btn-block btn-primary") }}
+        </form>
+
+    </div>
+</body>
+{% endblock %}

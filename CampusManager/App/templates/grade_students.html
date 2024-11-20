@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}
+Grade Students
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-white">Grade Students for Section {{ section.id }}</h2>
+
+    <form method="POST" action="{{ url_for('grade_students', section_id=section.id) }}">
+        {{ form.hidden_tag() }}
+
+        <div class="form-group">
+            {{ form.student_id.label(class="form-label text-white") }}
+            {{ form.student_id(class="form-control") }}
+        </div>
+
+        <div class="form-group">
+            {{ form.grade.label(class="form-label text-white") }}
+            {{ form.grade(class="form-control") }}
+        </div>
+
+        <div class="form-group">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+
+    <h3 class="text-white mt-4">Registered Students</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-white">Student ID</th>
+                <th class="text-white">Student Name</th>
+                <th class="text-white">Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for registration in students %}
+            <tr>
+                <td class="text-white">{{ registration.student_id }}</td>
+                <td class="text-white">{{ registration.student.first_name }} {{ registration.student.last_name }}</td>
+                <td class="text-white">
+                    {% if registration.grade is not none %}
+                    {{ registration.grade }}
+                    {% else %}
+                    No grade assigned
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

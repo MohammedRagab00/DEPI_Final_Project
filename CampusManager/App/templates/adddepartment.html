@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %} Admin Page {% endblock %}
+{% block content %}
+
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-register" style="color: white">
+            <!--To save us from attacks-->
+            {{ form2.hidden_tag() }}
+
+            <br>
+            <h1 class="h3 mb-3 font-weight-normal">To Add a Department</h1>
+            <br />
+            {{ form2.name.label() }}
+            {{ form2.name(class="form-control", placeholder="Enter department name") }}
+            {{ form2.head_id.label() }}
+            {{ form2.head_id(class="form-control", placeholder="Enter head Id: ") }}
+            <br />
+
+            {{ form2.submit(class="btn btn-lg btn-block btn-primary") }}
+        </form>
+
+    </div>
+</body>
+{% endblock %}

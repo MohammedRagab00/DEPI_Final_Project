@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block title %} Enroll | Drop Page {% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-8 col-md-12 mb-4">
+            <h2>Available Sections</h2>
+            <p>Click on one of the sections to Enroll</p>
+            <br>
+            <div class="table-responsive">
+                <table class="table table-hover table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Section ID</th>
+                            <th scope="col">Course ID</th>
+                            <th scope="col">Day</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Place</th>
+                            <th scope="col">Group</th>
+                            <th scope="col">Options</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for section in sections %}
+                        {% include 'includes/items_modals.html' %}
+                        <tr>
+                            <td>{{ section.id }}</td>
+                            <td>{{ section.course_id }}</td>
+                            <td>{{ section.day.name.capitalize() }}</td>
+                            <td>{{ section.start_time.strftime('%H:%M') }} - {{ section.end_time.strftime('%H:%M') }}
+                            </td>
+                            <td>{{ section.type.name.capitalize() }}</td>
+                            <td>{{ section.place }}</td>
+                            <td>{{ section.group }}</td>
+                            <td>
+                                <button class="btn btn-outline-success" data-toggle="modal"
+                                    data-target="#Modal-EnrollConfirm-{{ section.id }}">
+                                    Enroll
+                                </button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+            <h2>Enrolled Sections</h2>
+            <p>Click on a section to drop</p>
+            <br>
+            <div class="row">
+                {% for section in enrolled_sec %}
+                {% include 'includes/owned_items_modals.html' %}
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
+                    <div class="card text-center bg-dark">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ section.section_id }}</h5>
+                            <button type="button" class="btn btn-outline-danger" style="margin-bottom: 5px"
+                                data-toggle="modal" data-target="#Modal-DroppingConfirm-{{ section.section_id }}">
+                                Drop
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

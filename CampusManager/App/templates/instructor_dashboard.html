@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+Instructor Dashboard
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-white">Instructor Dashboard</h2>
+    <br>
+    <h3 class="text-white">Your Courses</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-white">Course ID</th>
+                <th class="text-white">Course Name</th>
+                <th class="text-white">Section</th>
+                <th class="text-white">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for section in taught_sections %}
+            <tr>
+                <td class="text-white">{{ section.course.id }}</td>
+                <td class="text-white">{{ section.course.name }}</td>
+                <td class="text-white">{{ section.id }}</td>
+                <td>
+                    <a href="{{ url_for('grade_students', section_id=section.id) }}"
+                        class="btn btn-primary btn-sm">Grade Students</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

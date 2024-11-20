@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}
+Big Ace University
+{% endblock %}
+{% block content %}
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white">
+    <div class="row align-items-center">
+        <!-- Left Column for Image -->
+        <div class="col-md-6">
+            <img src={{url_for('static', filename="logo.jpeg" )}} class="img-fluid" alt="Description of image">
+        </div>
+        <!-- Right Column for Text -->
+        <div class="col-md-6 p-lg-5 mx-auto my-5 text-md-start">
+            <h1 class="display-4 font-weight-normal">Student Management System</h1>
+            <p class="lead font-weight-normal">Start your learning journey by clicking the link below</p>
+            <a class="btn btn-primary" href="{{ url_for('profile_page') }}">Get Started</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

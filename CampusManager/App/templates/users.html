@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block title %} Users {% endblock %}
+{% block content %}
+<div class="container-fluid mt-4">
+    <div class="row">
+        <!-- Search Form -->
+        <form method="GET" action="{{ url_for('users_page') }}" class="form-inline mb-3 mx-3">
+            <div class="input-group" style="max-width: 600px;">
+                <input class="form-control" type="search" name="query" placeholder="Search by name, email"
+                    aria-label="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Responsive Table -->
+    <div class="table-responsive">
+        <table class="table table-hover table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Email Address</th>
+                    <th scope="col">SSN</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                {% include 'includes/edit_user.html' %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.first_name }}</td>
+                    <td>{{ user.last_name }}</td>
+                    <td>{{ user.email_address }}</td>
+                    <td>{{ user.ssn }}</td>
+                    <td>{{ user.role }}</td>
+                    <td>
+                        <button class="btn btn-outline-success mr-2" data-toggle="modal"
+                            data-target="#Modal-EditRole-{{ user.id }}">
+                            <i class="fas fa-user-edit"></i> Edit Role
+                        </button>
+                        <button class="btn btn-outline-danger" data-toggle="modal"
+                            data-target="#Modal-DeleteUser-{{ user.id }}">
+                            <i class="fas fa-trash-alt"></i> Delete
+                        </button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Pagination Controls -->
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            <!-- Previous Page Button -->
+            <li class="page-item {% if not users.has_prev %}disabled{% endif %}">
+                <a class="page-link"
+                    href="{{ url_for('users_page', page=users.prev_num, query=request.args.get('query')) }}" {% if not
+                    users.has_prev %}tabindex="-1" aria-disabled="true" {% endif %}>
+                    <i class="fas fa-chevron-left"></i> Previous
+                </a>
+            </li>
+            <!-- Next Page Button -->
+            <li class="page-item {% if not users.has_next %}disabled{% endif %}">
+                <a class="page-link"
+                    href="{{ url_for('users_page', page=users.next_num, query=request.args.get('query')) }}" {% if not
+                    users.has_next %}tabindex="-1" aria-disabled="true" {% endif %}>
+                    Next <i class="fas fa-chevron-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+{% endblock %}

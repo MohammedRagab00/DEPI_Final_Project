@@ -1,0 +1,69 @@
+<style>
+    .modal-content {
+        background-color: #212121;
+    }
+</style>
+
+<!-- Editing Role -->
+<div class="modal fade" id="Modal-EditRole-{{ user.id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalLabel">
+                    Edit Role for User: {{ user.id }}
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="POST">
+                    {{ edit_form.hidden_tag() }}
+
+                    <div class="form-group">
+                        <label for="roleSelect">Select Role:</label>
+                        <select class="form-control" id="roleSelect" name="role">
+                            <option value="0" {% if user.role==0 %}selected{% endif %}>0 - User</option>
+                            <option value="1" {% if user.role==1 %}selected{% endif %}>1 - Moderator</option>
+                            <option value="2" {% if user.role==2 %}selected{% endif %}>2 - Admin</option>
+                        </select>
+                    </div>
+                    <input id="user_id" name="user_id" type="hidden" value="{{user.id}}">
+
+                    {{ edit_form.submit(class="btn btn-outline-success btn-block") }}
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Delete User Modal -->
+<div class="modal fade" id="Modal-DeleteUser-{{ user.id }}" tabindex="-1" aria-labelledby="DeleteUserLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="DeleteUserLabel">Delete User: {{ user.id }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="{{ url_for('users_page') }}">
+                    {{ delete_form.hidden_tag() }}
+                    <h4 class="text-center">Are you sure you want to delete {{ user.first_name }} {{ user.last_name }}?
+                    </h4>
+                    <input id="delete_user_id" name="delete_user_id" type="hidden" value="{{ user.id }}">
+                    {{ delete_form.submit(class="btn btn-outline-danger btn-block") }}
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

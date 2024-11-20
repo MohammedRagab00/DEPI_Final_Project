@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %} Admin Page {% endblock %}
+{% block content %}
+
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-register" style="color: white">
+            <!--To save us from attacks-->
+            {{ form.hidden_tag() }}
+
+            <br>
+            <h1 class="h3 mb-3 font-weight-normal">To Add a Course Prerequisite</h1>
+            <br />
+            {{ form.course_id.label() }}
+            {{ form.course_id(class="form-control", placeholder="Enter course id") }}
+            {{ form.prerequisite_id.label() }}
+            {{ form.prerequisite_id(class="form-control", placeholder="Enter course Prerequisite") }}
+            <br />
+
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+        </form>
+
+    </div>
+</body>
+{% endblock %}

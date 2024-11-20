@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Register/Unregister for Teaching{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h3>Register</h3>
+    <form method="POST" action="{{ url_for('teaching_page') }}">
+        {{ register_form.hidden_tag() }}
+
+        <div class="form-group">
+            {{ register_form.section_id.label(class="form-label") }}
+            {{ register_form.section_id(class="form-control", placeholder="Enter Section ID") }}
+            {% if register_form.section_id.errors %}
+            <div class="text-danger">
+                {% for error in register_form.section_id.errors %}
+                <p>{{ error }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+        {{ register_form.action }} <!-- Hidden field to track the form action -->
+        {{ register_form.submit(class="btn btn-outline-success btn-block") }}
+    </form>
+
+    <br>
+    <br>
+    <hr
+        style="border: 0; height: 4px; background-image: linear-gradient(to right, rgba(0, 0, 255, 0), rgba(0, 0, 255, 0.75), rgba(0, 0, 255, 0));">
+    <br>
+
+    <h3>Unregister</h3>
+    <form method="POST" action="{{ url_for('teaching_page') }}">
+        {{ unregister_form.hidden_tag() }}
+
+        <div class="form-group">
+            {{ unregister_form.section_id.label(class="form-label") }}
+            {{ unregister_form.section_id(class="form-control", placeholder="Enter Section ID") }}
+            {% if unregister_form.section_id.errors %}
+            <div class="text-danger">
+                {% for error in unregister_form.section_id.errors %}
+                <p>{{ error }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+        {{ unregister_form.action }} <!-- Hidden field to track the form action -->
+        {{ unregister_form.submit(class="btn btn-outline-danger btn-block") }}
+    </form>
+</div>
+{% endblock %}
