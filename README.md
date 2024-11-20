@@ -106,4 +106,3 @@ The Campus Manager is a comprehensive platform designed to manage various aspect
 
 ### Contact
 For any questions or suggestions, please contact [mohammed_ragab_@outlook.com](mailto:mohammed_ragab_@outlook.com).
-```
