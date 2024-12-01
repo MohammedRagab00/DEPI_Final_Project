@@ -1,80 +1,67 @@
-```markdown
 # Combined Project: SSIS Project & Campus Manager
 
 ## SSIS Project
-
 ### Prerequisites
-- **SQL Server Data Tools (SSDT)**: Ensure you have SSDT installed for developing SSIS packages.
-- **SQL Server Integration Services (SSIS)**: Required to run and deploy SSIS packages.
-- **.NET Framework**: Specify the required version.
-- **Other Tools**: List any other necessary software or tools.
+- **Visual Studio** with SQL Server Integration Services (SSIS) extension
+- **SQL Server**
+- **.NET Framework 4.7.2** or later
 
 ### Setup
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/MohammedRagab00/DEPI_Final_Project.git
-   cd your-repo
-   ```
+   cd DEPI_Final_Project
 
-2. **Set Up Environment Variables**:
-   - Create a `.env` file in the root directory with the necessary environment variables.
-   - Example:
-     ```plaintext
-     DB_PASSWORD=yourpassword
-     ```
+I'll revise the SSIS Project section to make it more clear and concise:
 
-3. **Restore Packages and Dependencies**:
-   - If applicable, provide commands to restore any required packages.
+```markdown
+## SSIS Project
+### Prerequisites
+- **Visual Studio** with SQL Server Integration Services (SSIS) extension
+- **SQL Server**
+- **.NET Framework 4.7.2** or later
+
+### Setup
+1. **Clone the Repository**:
    ```bash
-   # Example command to restore packages
+   git clone https://github.com/MohammedRagab00/DEPI_Final_Project.git
+   cd SSIS-Project
    ```
 
-4. **Configure the Project**:
-   - Update any configuration files with your local settings.
+2. **Open the Project**:
+   - Launch Visual Studio
+   - Open the Solution File: `[Project Name].sln`
+   - Ensure SSIS extension is installed in Visual Studio
+
+3. **Configuration**:
+   - Check connection strings in configuration files
+   - Update database connection details as needed
 
 ### Running the Project
-1. **Open the Project**:
-   - Open the solution file (`.sln`) in Visual Studio.
+1. **Build the Solution**:
+   - In Visual Studio, go to Build > Build Solution
+   - Resolve any dependency issues
 
-2. **Build the Project**:
-   - Build the solution to ensure all dependencies are correctly set up.
+2. **Deploy SSIS Packages**:
+   - Right-click on the SSIS project
+   - Select "Deploy" 
+   - Follow the deployment wizard to specify the target SQL Server
 
-3. **Deploy the SSIS Packages**:
-   - Deploy the SSIS packages to your SSIS server.
-
-4. **Run the Packages**:
-   - Execute the SSIS packages as needed.
-
-### Sample Data
-- **Provide Sample Data Files**:
-  - Include sample data files or instructions on how to generate the necessary data.
-  - Example:
-    ```plaintext
-    /sample-data/sample-data-file.csv
-    ```
+3. **Execute Packages**:
+   - Open SQL Server Integration Services
+   - Locate and run the deployed packages
 
 ### Troubleshooting
-- **Common Issues and Solutions**:
-  - List common issues users might encounter and their solutions.
-  - Example:
-    ```markdown
-    ### Issue: Missing Environment Variables
-    **Solution**: Ensure you have created a `.env` file with the required variables.
-    ```
+- Ensure all connection strings are correct
+- Verify SQL Server permissions
+- Check SSIS runtime is installed and configured
 
 ### Contributing
-- **Guidelines for Contributing**:
-  - Provide guidelines for contributing to the project.
-  - Example:
-    ```markdown
-    ### How to Contribute
-    1. Fork the repository.
-    2. Create a new branch (`git checkout -b feature-branch`).
-    3. Make your changes.
-    4. Commit your changes (`git commit -m 'Add new feature'`).
-    5. Push to the branch (`git push origin feature-branch`).
-    6. Open a pull request.
-    ```
+- Fork the repository
+- Create a feature branch
+- Commit your changes
+- Push and create a pull request
+
 
 ## Campus Manager
 
