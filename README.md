@@ -12,22 +12,6 @@
    git clone https://github.com/MohammedRagab00/DEPI_Final_Project.git
    cd DEPI_Final_Project
 
-I'll revise the SSIS Project section to make it more clear and concise:
-
-```markdown
-## SSIS Project
-### Prerequisites
-- **Visual Studio** with SQL Server Integration Services (SSIS) extension
-- **SQL Server**
-- **.NET Framework 4.7.2** or later
-
-### Setup
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/MohammedRagab00/DEPI_Final_Project.git
-   cd SSIS-Project
-   ```
-
 2. **Open the Project**:
    - Launch Visual Studio
    - Open the Solution File: `[Project Name].sln`
